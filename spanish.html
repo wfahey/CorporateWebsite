@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<title>MadeMedia Site Web d'Entreprise</title>
+
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		navigator.sayswho= (function(){
+			var N= navigator.appName, ua= navigator.userAgent, tem;
+			var M= ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+			if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+			M= M? [M[1], M[2]]: [N, navigator.appVersion,'-?'];
+			return M;
+		})();	
+		var platform = navigator.platform.toLowerCase();
+		$(document).ready(function(){
+			if(/win|linux/i.test(platform))
+   			{
+	   			if(navigator.sayswho[0] != 'MSIE')
+		       	{
+				    if(navigator.sayswho[0] == 'Chrome' )
+					{
+						$('h1, h2, h3, h4, h5, h6').css('-webkit-text-stroke-width', '.5px');
+						$('.lang').css('-webkit-text-stroke-width', '.9px');
+						$('body').css('-webkit-text-stroke-width', '.1px');
+					}
+					else if(navigator.sayswho[0] == 'Firefox' || navigator.sayswho[0] == 'Opera')
+					{
+						$('.lang').css('font-size', '16px');
+						$('.lang').css('text-shadow', '0px .1px 0');
+					}
+			    }
+
+		   	}
+		});
+	</script>
+
+</head>
+<body>
+	<div class="redirect" style="position: absolute; right: 0; left: 0; top: 0; bottom: 0; min-width: 980px;">
+			<div style="position: relative;">
+				<img src="img/Logos/Main-txt.png" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px;"/>
+				<div style="position: absolute; right: 50px; top: 50px; vertical-align: top; font-weight: bold; z-index: 1;">
+					<a class="lang" href="index.html" style="display: inline; color: red; cursor: pointer; ">EN</a>&nbsp;&nbsp;<a class="lang" href="french.html" style="display: inline; color: red; cursor: pointer;">FR</a>&nbsp;&nbsp;<p class="lang" style="display: inline; font-size: 14px;">ES</p>
+				</div>
+				<div class="leftDiv">
+					<div style="text-align: center; margin-left: 25%; margin-top: 150px; min-width: 358px;">
+						<h1 style="margin-left: 20%; font-size: 40px;">Próximamente</h1>
+					</div>
+				</div>
+				<div class="rightDiv">
+					<img src="img/Electronics/ipad-slant.png" style="height: 75%; margin-top: -50px; width: auto; margin-left: 20%;"/>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
