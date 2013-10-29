@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
 	<meta charset="utf-8"> 
-	<meta name='viewport' content='maximum-scale=1.2' />
+	<meta name='viewport' content='maximum-scale=1.2'/>
 	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 	<title>MadeMedia's OnBoard: Revolutionizing Mobile Transactions</title>
 	
@@ -18,7 +18,7 @@
 	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/jquery.quovolver.js"></script>
 	<script type="text/javascript" src="js/flipcounter.js"></script>
-	<script type="text/javascript" src="js/jshashtable-2.1/jshashtable.js" ></script>
+	<script type="text/javascript" src="js/jshashtable-2.1/jshashtable.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
 	<script type="text/javascript" src="js/jquery.mb.audio.js"></script>
@@ -60,8 +60,8 @@
 			    		<li class="dropdown lang">
 			    			<a><img id="dropDownEn" class="dropdown-toggle" data-toggle="dropdown" src="img/Flags/united-states.png" alt=""/></a>
 			    			<ul class="dropdown-menu" id="langDropDown">
-			    				<li><a id="dropDownFr" href="french.html"><img src="img/Flags/france.png" alt=""/></a></li>
-			    				<li><a id="dropDownSp" href="spanish.html"><img src="img/Flags/lang-mexico.png" alt=""/></a></li>
+			    				<li><a id="dropDownFr" href="french.html"><img src="img/Flags/france.png" style="margin-left: -8px; width: 223%; max-width: 223%;" alt=""/></a></li>
+			    				<li><a id="dropDownSp" href="spanish.html"><img src="img/Flags/lang-mexico.png" style="margin-left: -8px; width: 223%; max-width: 223%;" alt=""/></a></li>
 			    			</ul>
 			    		</li>
 			    	</ul>
@@ -70,18 +70,21 @@
 	    </div>
 
 	    <ul id="smallMenu" class="dropdown-menu">
-	    	<li><a class="intro">Home</a></li>
-	    	<li><a class="onboard">OnBoard</a></li>
-	    	<li><a class="fundraising">Fundraising</a></li>
-			<li><a class="sales">Sales</a></li>
-			<li><a class="about">About</a></li>
-		    <li><a class="press">Press</a></li>
-		    <li><a class="contact">Contact</a></li>
+	    	<li><a id="homeSmall" class="intro">Home</a></li>
+	    	<li><a id="onBoardSmall" class="onboard">OnBoard</a></li>
+	    	<li><a id="fundSmall" class="fundraising">Fundraising</a></li>
+			<li><a id="salesSmall" class="sales">Sales</a></li>
+			<li><a id="aboutSmall" class="about">About</a></li>
+		    <li><a id="pressSmall" class="press">Press</a></li>
+		    <li><a id="contactSmall" class="contact">Contact</a></li>
 	    </ul>
 	    
 	    <!-- SECTION 1 START -->
 		<div class="scrollblock" id="intro">
 			<div style="position: relative;">
+				<div id="smallLang" style="display: none; opacity: 0; position: absolute; left: 50px; top: -20px; vertical-align: top; font-weight: bold; z-index: 1;">
+					<p class="lang" style="display: inline; font-size: 14px;">EN</p>&nbsp;&nbsp;<a class="lang" href="french.html" style="color: red; cursor: pointer; display: inline;">FR</a>&nbsp;&nbsp;<a class="lang" href="spanish.html" style="color: red; cursor: pointer;">ES</a>
+				</div>
 				<div class="leftDiv">
 					<div id="titleWrap">
 						<h1 id="heading1">We are Made Media.</h1>
@@ -116,7 +119,7 @@
 						<img id="hex6" src="img/bighex1.png" alt=""/>
 					</div>
 				</div>
-				<div class="rightDiv" >
+				<div class="rightDiv">
 					<div id="introFundWrap">
 						<img id="hex1" src="img/bighex2.png" alt=""/>	
 						<h2 id="heading4">OnBoard for Fundraising</h2><br>
@@ -177,7 +180,11 @@
 				<div class="rightDiv">
 					<div style="width: 50%;">
 						<div style="margin-right: 10%;">
-							<img id="ipad3" src="img/Electronics/ipad-std.png" alt=""/>
+							<img id="ipad3" src="img/Electronics/ipad-dash.png" alt=""/>
+							<div class="picNav" id="picNav1">
+								<img id="picpg1" class="active" src="img/grey-circle.png" alt=""/>
+								<img id="picpg2" src="img/grey-circle.png" alt=""/>
+							</div>
 							<img id="hex7" src="img/bighex3.png" alt=""/>
 							<img id="hex8" src="img/bighex1.png" alt=""/>
 							<img id="hex13" src="img/bighex4.png" alt=""/>
@@ -200,7 +207,17 @@
 				</div>
 				<div style="position: relative; clear: both; top: 800px;">
 					<span class="bigIpad">
+						<div class="demoDiv" id="donateNow" style="top: 722px; margin-left: 129px;"></div>
+						<div class="demoDiv" id="playVideo" style="top: 722px; margin-left: 422px;"></div>
+						<div class="demoDiv" id="sponsorship" style="top: 830px; margin-left: 129px;"></div>
+						<div class="demoDiv" id="policyInfo" style="top: 830px; margin-left: 422px;"></div>
+						<div id="videoWrap" style="position: absolute; height: 859px; margin-top: 92px; margin-left: 87px; display: none; opacity: 0; text-align: center; background: black;">
+							<iframe id="embeddedVideo" style="margin-top: 160px;" width="646" height="541" src="" frameborder="0" allowfullscreen></iframe>
+							<p id="backFromVid" style="color: white; cursor: pointer;">Back</p>
+						</div>
+						
 					</span>
+
 					<div id="fullIpad"><p id="ipadTxt">Click to see full iPad screen</p><img src="img/magnifying-glass.png" alt=""/></div>
 				</div>
 				<div id="socFundContainer">
@@ -266,7 +283,11 @@
 				<div class="leftDiv">
 					<div style="width: 50%;">
 						<div style="margin-left: 10%;">
-							<img id="tablet" src="img/Electronics/tablet-samsung.png" alt=""/>	
+							<img id="ipad4" src="img/Electronics/ipad-receipt.png" alt=""/>	
+							<div class="picNav" id="picNav2">
+								<img id="picpg3" class="active" src="img/grey-circle.png" alt=""/>
+								<img id="picpg4" src="img/grey-circle.png" alt=""/>
+							</div>
 							<img id="hex9" src="img/bighex4.png" alt=""/>
 							<img id="hex10" src="img/bighex3.png" alt=""/>
 							<img id="hex12" src="img/bighex1.png" alt=""/>
@@ -322,7 +343,7 @@
 		</div>
 
 		<div class="scrollblock" id="socSalesContainer">
-			<div id="socialSales" style="position: relative" >
+			<div id="socialSales" style="position: relative">
 				<div class="leftDiv" style="display: block; margin-top: 10px; margin-left: auto; margin-right: auto; text-align: center;">
 					<div>
 						<h4 style="font-weight: 500; font-size: 24px;">Share us on social networks:</h4>
@@ -484,7 +505,7 @@
 				<div id="pressPage2" style="position: relative; opacity: 0; display: none;">
 					<div class="leftDiv" style="width: 25%; margin-left: 20%;">
 						<div class="campaignWrap">
-							<p class="camDate" style="">2012Nov13</p><br>
+							<p class="camDate">2012Nov13</p><br>
 							<div class="logoHolder">
 								<img src="img/CampaignLogos/diabetesLogo.png" alt=""/>
 							</div>
@@ -628,13 +649,13 @@
 				</div>
 				<div id="contactWrap">
 					
-					<img id="hex11" src="img/contactInfo.png" alt="" />
+					<img id="hex11" src="img/contactInfo.png" alt=""/>
 				</div>
 				<div id="socialWrap">
 					<h4 style="text-align: center; color: #56B3A6;">Visit us on social networks</h4>
 					<div style="width: 100%; text-align: center; margin-left: auto; margin-right: auto; overflow: hidden; white-space: nowrap; bottom: 100px;">
-						<a href="http://www.facebook.com/mademediainc" target="_blank"><img src="img/Logos/facebook-red.png" style="height: 100px; width: auto; margin-right: 10px; margin-left: auto;" alt="" /></a>
-		                <a href="https://twitter.com/intent/user?screen_name=MadeMediaInc" target="_blank"><img src="img/Logos/twitter-red.png" style="height: 100px; width: auto; margin-right: 10px; margin-left: 10px;" alt="" /></a>
+						<a href="http://www.facebook.com/mademediainc" target="_blank"><img src="img/Logos/facebook-red.png" style="height: 100px; width: auto; margin-right: 10px; margin-left: auto;" alt=""/></a>
+		                <a href="https://twitter.com/intent/user?screen_name=MadeMediaInc" target="_blank"><img src="img/Logos/twitter-red.png" style="height: 100px; width: auto; margin-right: 10px; margin-left: 10px;" alt=""/></a>
 		                <a href="http://www.flickr.com/photos/mademediainc/" target="_blank"><img src="img/Logos/flickr-red.png" style="height: 100px; width: auto; margin-right: auto; margin-left: 10px;" alt=""/></a>
 		            </div>
 				</div>
